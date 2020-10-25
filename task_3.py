@@ -18,18 +18,17 @@ import random
 import copy
 
 
-# m = int(input('Введите m: '))
-orig_list = [random.randint(-100, 100) for _ in range((2*2)+1)]
+m = int(input('Введите m: '))
+orig_list = [random.randint(-100, 100) for _ in range((2*5)+1)]
 print(orig_list)
 
-#элемент больше len // 2 элементов
 i = 0
 for num in orig_list:
     for num_2 in orig_list:
         if num > num_2:
             result = num
             i += 1
-    if i == 2:
+    if i == len(orig_list) // 2:
         result = num
         break
     i = 0
